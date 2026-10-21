@@ -1,0 +1,32 @@
+{
+  "name": "basyir-agency-vnext1",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "vitest run",
+    "build:nabra": "node scripts/fix-nabra-windows.mjs && npm --prefix node_modules/nabra-tts run build",
+    "postinstall": "npm run build:nabra"
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest",
+    "nabra-tts": "https://github.com/Oddadmix/nabra-tts/archive/refs/heads/main.tar.gz"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "jsdom": "latest",
+    "vitest": "latest",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "@types/react": "^19.3.0",
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.28.2"
+  }
+}
